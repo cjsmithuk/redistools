@@ -1,0 +1,4 @@
+#!/bin/bash
+read -r key data
+echo $key
+echo "$data" | base64 -d | redis-cli -x restore $key 0

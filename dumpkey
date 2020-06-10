@@ -1,0 +1,4 @@
+#!/bin/bash
+echo -n "$1 "
+redis-cli --raw dump $1 | head -c-1 | base64 -w 0
+echo ""
